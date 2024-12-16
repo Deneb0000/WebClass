@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="shortcut icon" type="image/x-icon" href="http://localhost/webPro/images/SiSt.ico">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<!-- ㄴ 뷰포트 ? 동일한 웹 페이지가 다양한 기기에 맞춰 크기, 배율을 제어하는 메타태그 -->
+<style>
+	*{
+		box-sizing: border-box;
+	}
+	
+	body {
+	font-family: Arial, Helvetica, sans-serif;
+	}
+	
+	div#header{
+	background-color: #666;
+	color: white;
+	padding: 30px;
+	text-align: center;
+	font-size: 35px;
+	}
+	
+	div#footer{
+	background-color: #777;
+	color: white;
+	padding: 20px;
+	text-align: center;
+	font-size: 30px;
+	}
+	
+	div#nav{
+		width: 30%;
+		background-color: #ccc;
+		height: 500px;
+		padding: 20px;
+		
+		float: left;
+	}
+	
+	div#article{
+		width: 70%;
+		background-color: #f1f1f1;
+		padding: 20px;
+		min-height:500px; /*최소 길이*/
+		
+		float: left;
+	}
+	
+	div#section{
+	/* border: solid 1px red; */
+	}
+	
+	div#section::after{	/*section이 추가된 뒤에 나오게한다는 뜻*/
+		content: " ";
+		display: table;
+		clear: both;		
+	}
+
+</style>
+<style>
+/* css 미디어 쿼리 */
+@media screen and (max-width:800px){
+	div#nav, div#article{
+		width: 100%;
+		height: auto;
+	}
+}
+</style>
+</head>
+<body>
+<!-- (#header>h2)+(#section>(#nav>ul>li*3>a)+(#article>(h2+p*2>lorem)*3))+(#footer>h2)
+	반응형 맵 구현 : 모든 장치(PC, 스마트폰, 태블릿 등등)에서 웹 사이트의 자동 크기 조정
+	( css 미디어 쿼리 ) 
+-->
+
+	<div id="header">
+		<h2>Cites-시멘틱태그(sementic elements)</h2>
+	</div>
+	<div id="section">
+		<div id="nav">
+			<ul>
+				<li><a href="">London</a></li>
+				<li><a href="">Paris</a></li>
+				<li><a href="">Seoul</a></li>
+			</ul>
+		</div>
+		<div id="article">
+			<h2>London</h2>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque quas earum sit quibusdam qui praesentium dolores animi illo hic illum quisquam fugit recusandae inventore rem laudantium accusantium nihil neque saepe.</p>
+			<p>Iste architecto ipsum obcaecati ab dolore ad vel vitae tempora temporibus minus optio alias. Et illo deserunt culpa quos cupiditate ea id blanditiis dolorem vel eligendi rem repellat dignissimos veritatis?</p>
+			<h2>Paris</h2>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit perspiciatis consectetur enim porro delectus! Laudantium id incidunt at quibusdam sit nostrum debitis numquam animi magnam provident deleniti asperiores et sequi!</p>
+			<p>Suscipit dignissimos velit dolores at repellendus natus vero provident in ad sapiente voluptatibus dolor possimus consequuntur non sint totam unde. Voluptatem debitis sapiente ratione ipsa recusandae doloremque asperiores facere incidunt.</p>
+			<h2>Seoul</h2>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet ad explicabo ipsa cumque id voluptatum officia ratione ut consequatur est temporibus delectus dignissimos vitae deleniti doloremque voluptas saepe soluta modi?</p>
+			<p>Rerum delectus tenetur eius molestiae deleniti dolorem nulla sed earum voluptatem fuga explicabo accusantium aliquid dicta vero commodi cupiditate eligendi sapiente architecto ullam laboriosam debitis excepturi sequi nesciunt rem ipsa?</p>
+		</div>
+	</div>
+	<div id="footer">
+		<h2>Footer</h2>
+	</div>
+
+</body>
+</html>

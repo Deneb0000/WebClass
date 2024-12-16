@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="shortcut icon" type="image/x-icon" href="http://localhost/webPro/images/SiSt.ico">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="http://localhost/webPro/resources/cdn-main/example.css">
+<script src="http://localhost/webPro/resources/cdn-main/example.js"></script>
+<style>
+ span.material-symbols-outlined{
+    vertical-align: text-bottom;
+ }  
+</style>
+</head>
+<body>
+<header>
+  <h1 class="main"><a href="#" style="position: absolute;top:30px;">kenik HOme</a></h1>
+  <ul>
+    <li><a href="#">로그인</a></li>
+    <li><a href="#">회원가입</a></li>
+  </ul>
+</header>
+<div>
+  <xmp class="code">
+     
+  </xmp>
+  
+  <table border="1">
+    <tr>
+      <td>Lorem.</td>
+      <td></td>
+      <td>At?</td>
+      <td>Quisquam.</td>
+    </tr>
+    <tr>
+      <td>Lorem.</td>
+      <td>Ducimus!</td>
+      <td>Eligendi.</td>
+      <td>Exercitationem?</td>
+    </tr>
+    <tr>
+      <td>Lorem.</td>
+      <td>Vero?</td>
+      <td></td>
+      <td>Consequuntur!</td>
+    </tr>
+    <tr>
+      <td>Lorem.</td>
+      <td>Eius!</td>
+      <td>Vero.</td>
+      <td>Hic.</td>
+    </tr>
+    <tr>
+      <td>Lorem.</td>
+      <td></td>
+      <td></td>
+      <td>Labore!</td>
+    </tr>
+  </table>
+
+<p>Lorem ipsum dolor sit amet.</p>
+<p>Vitae illo quibusdam iure unde?</p>
+<p style="display: none;">Cum dicta expedita consequuntur officia.</p>
+<p>Libero eaque vel voluptatibus vero.</p>
+<p>Modi quod numquam dicta incidunt?</p>
+
+<script>
+  // $("td:empty").css("background-color","red");
+  // $("td").not(":empty").css("background-color","blue");
+
+  //td가 자식(내용)이 있는 부모
+  // $("td:parent").css("background-color","red");
+
+  // $(":root") == html 태그
+
+  // $("p:hidden").css("background-color","yellow");
+  $("p:hidden").show(5000, function(){
+    $("p:visible").hide(5000)
+  }); //5초동안 나타나겠다
+
+  //.show(숫자, callback)
+  
+
+</script>
+</div> 
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="shortcut icon" type="image/x-icon" href="http://localhost/webPro/images/SiSt.ico">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+<body>
+<!-- 더미 텍스트 생성기 'Lorem ipsum'-->
+	<!-- div>lorem -->
+	<div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate facere impedit ducimus laboriosam alias ad reiciendis quidem maiores eaque rem assumenda dolore sunt et incidunt quasi atque esse architecto aliquid!</div>
+
+	<!-- div>lorem1 --> <div>Lorem.</div>
+	<!-- div>lorem5 --> <div>Lorem ipsum dolor sit amet.</div>
+	
+	<!-- ul.generic-lisr>li.item*4>lorem9 -->
+	<ul class="generic-lisr">
+		<li class="item">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro.</li>
+		<li class="item">Cumque consequatur amet eos. Deleniti repudiandae sequi nemo temporibus?</li>
+		<li class="item">Sed accusantium earum ex doloribus vitae veniam illo officiis.</li>
+		<li class="item">Deleniti sapiente accusamus nostrum molestiae deserunt fuga porro reprehenderit?</li>
+	</ul>
+	
+	<!-- 암묵적으로 이름을 생략 - 부모요소로 인하여 가능 -->
+	<!-- ul>li.item*3>lorem1 -->
+	<!-- ul>.item*3>lorem1 -->
+	ul>li.item*3>lorem1
+	
+	<!-- #box+.sample -->
+	<div id="box"></div>
+	<div class="sample"></div>
+	
+	<!-- em>.info -->
+	<em><span class="info"></span></em>
+	
+	<!-- table>#row$*4>[colspan=2] -->
+	<table>
+		<tr id="row1">
+			<td colspan="2"></td>
+		</tr>
+		<tr id="row2">
+			<td colspan="2"></td>
+		</tr>
+		<tr id="row3">
+			<td colspan="2"></td>
+		</tr>
+		<tr id="row4">
+			<td colspan="2"></td>
+		</tr>
+	</table>
+	
+	<!-- #page>.logo+ul#navigation>li*5>a -->
+	<div id="page">
+		<div class="logo"></div>
+		<ul id="navigation">
+			<li><a href=""></a></li>
+			<li><a href=""></a></li>
+			<li><a href=""></a></li>
+			<li><a href=""></a></li>
+			<li><a href=""></a></li>
+		</ul>
+	</div>
+	
+</body>
+</html>

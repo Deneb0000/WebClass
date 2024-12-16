@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="shortcut icon" type="image/x-icon" href="http://localhost/webPro/images/SiSt.ico">
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+<style>
+span {
+	color: red;
+	background-color: yellow;
+	border: solid 1px gray;
+	width: 300px;
+}
+</style>
+</head>
+<body>
+	<!--
+	[span] 태그
+		ㄴ 컨테이너(용기) 역할 : 다른 태그들을 담기위한 태그
+		ㄴ 인라인 모드
+-->
+	<span id="team1">
+		1조 : <br>
+		<span id="s01">이시훈</span><span>김준석</span>
+		<span>최사랑</span>
+		<span>김선우</span>
+	</span>
+ <br>
+	<!--     <button onclick="spanHide();">숨기기</button> -->
+	<button id="btnHide">숨기기</button>
+	<button id="btnShow" onclick="spanShow();">보이기</button>
+	<button onclick="spanHide()">숨기기</button>
+
+	<script>
+		$("#btnShow").hide();
+
+		/*         function spanHide(){	//숨기기
+		 $("#team1").hide(); //j쿼리 객체
+		 } */
+		function spanShow() { //보이기
+			$("#team1").show();
+		}
+
+		// jquery action method로 click 이벤트 처리.
+		$("#btnHide").click(function() { //function() : 익명함수
+			$("#team1").hide();
+			$("#btnShow").show();
+//			$("#btnHide").hide();
+			$(this).hide();
+
+		});
+	</script>
+
+</body>
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="shortcut icon" type="image/x-icon" href="http://localhost/webPro/images/SiSt.ico">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="http://localhost/webPro/resources/cdn-main/example.css">
+<script src="http://localhost/webPro/resources/cdn-main/example.js"></script>
+<style>
+ span.material-symbols-outlined{
+    vertical-align: text-bottom;
+ }  
+</style>
+</head>
+<body>
+<header>
+  <h1 class="main"><a href="#" style="position: absolute;top:30px;">kenik HOme</a></h1>
+  <ul>
+    <li><a href="#">로그인</a></li>
+    <li><a href="#">회원가입</a></li>
+  </ul>
+</header>
+<div>
+  <xmp class="code">
+     [ jquery DOM 조작 ]        도큐멘트 오브젝트 모델      html 객체를 요청-> HTML DOM
+     1. 내용 (content) 조작
+      js innerText      jq text();
+         innerHTML         html();
+         value             val();
+
+     2. 속성 조작
+      js setAttribute() jq attr();
+         gatAttribute()    prop()
+         객체명. 속성명
+    
+     3. 새로운 요소 추가
+      js createElement()  jq append() / appendTo()
+         appendChild()       prepend()/ prependTo()
+        
+                             before() 선택한 요소 앞에 추가
+                             after()  선택한 요소 뒤에 추가
+                        
+     4. 요소를 제거
+      empty()
+      remove()
+
+     5. jquery CSS 조작
+      addClass()
+      removeClass()
+      toggleClass()
+      css()
+
+     6. 너비   width()             높이      height()
+        패딩   innerWidth()
+        보더   outerWidth()
+        마진   outerWidth(true)
+  </xmp>
+
+
+  <h3>h3 태그 설명</h3>
+<script>
+  //TypeError: $(...).myAlret is not a function       함수 존재x
+  // $("h3").myAlret("사용자 만든 경고창!!!");
+  //jq에 myAlret() 함수등록
+  // $ == jquery == window.jquery
+
+  //prototype "객체 생성자"를 사용해서 속성, 메서드 추가..
+  //$.prototype.속성
+  //$.prototype.메서드
+  //$.fn==$.prototype
+  $.fn.myAlert=function(msg){
+    alert(`${msg}`);
+  }
+</script>
+  <script>
+    //모든 자식요소를 제거하겠다 +xmp태그는 남아있음 내용물 비운다고 생각하기 좋음
+    // $("xmp.code").empty();
+    // $("#demo").html(" ");  == $("#demo").empty()
+
+    //요소 자체 제거
+    // $("xmp.code").remove();
+
+    $("xmp.code")
+      .before("<b>앞</b>")
+      .after("<b>뒤</b>");
+  </script>
+</div> 
+</body>
+</html>

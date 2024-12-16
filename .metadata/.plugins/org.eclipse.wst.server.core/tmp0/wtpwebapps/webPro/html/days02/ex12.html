@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="shortcut icon" type="image/x-icon" href="http://localhost/webPro/images/SiSt.ico">
+<style>
+/*링크 스타일 지정*/
+/*a태그가 한번도 방문한적이 없을때*/
+/* a:link{
+color: green;
+text-decoration: none;
+} */
+/*a태그가 방문한적이 있을때*/
+/* a:visited {
+color: pink;
+text-decoration: none;
+} */
+ /*a태그에 마우스를 올릴때*/
+/* a:hover{
+color: red;
+} */
+/*a태그가 실행하는 순간일 때*/
+/* a:active {
+text-decoration: overline underline line-through;
+} */
+
+a{
+color: black;
+text-decoration: none;
+}
+a:hover {
+	color: red;
+	text-decoration: underline;
+	/* text-transform: uppercase; */ /*부모속성값 상속*/
+	text-transform: capitalize; /*첫번째 글자만 대문자로 바꿈*/
+}
+</style>
+</head>
+<body>
+
+<h3> html 링크 </h3>
+<!-- 책갈피(북마크) 구현 
+	- 다른 웹 페이지의 특정 부분으로 바로 이동하는 기능
+	- 특정 웹 페이지가 매우 긴 경우에 북마크 기능을 사용하면 유용하다
+	- 원하는 위치로 자동으로 스크롤이 이동된다
+-->
+<a href="../days01/ex01.html#webid">../days01/ex01.html#webid </a> <br />
+
+
+<!-- a 링크태그의 target의 속성 
+	- 링크된 문서를 열 위치를 지정하는 속성 
+	- 기본값은 _self, 자기 자신의 창(탭)에서 문서를 연다 
+	- 	   _blank	새로운 창/탭에서 문서를 연다
+		   _top		창 전체에서 문서를 연다
+		   _parent	부모(상위) 프레임 수행에 문서를 연다
+		   이름 -->
+<a href="./../days01/ex02.html"target="_self">days01/ex02.html</a> <br />
+<a href="./../days01/ex02.html"target="_blank">days01/ex02.html</a> <br />
+
+<!-- Link - 사용자가 링크를 통해서 다른 페이지로 이동할수 있는 태그
+	 - 하이퍼 링크
+	 - a 태그 
+	 - 링크 태그 위에 마우스를 올리면, 작은 손 모양으로 커서가 바뀜
+	 - 문자열(텍스트, 이미지,,, 다른 html) 요소 -->
+	 
+	 
+<a href="">naver</a> <br />
+<a href="#">naver</a> <br /> <!-- 자기 자신을 요청하고 싶지않으면 '#'을 붙혀둔다 #:책갈피-->
+<!-- 절대경로 -->
+<a href="http://www.naver.com">naver</a> <br />
+<a href="http://www.daum.co.kr">daum</a> <br />
+<!-- 절대경로 -->
+<a href="http://localhost/webPro/html/days01/ex01.html">days01.ex01.html</a> <br />
+<!-- 상대경로 : 기준이 어딘지 필요하다 -->
+<a href="ex01.html">ex01.html/파일명</a> <br />
+<a href="/ex01.html">/ex01.html/404</a> <br />
+<a href="/webPro/html/days01/ex01.html">/days01.ex01.html</a> <br />
+<!-- . 현재 디렉터리 ..상위 디렉터리 -->
+<a href="./ex01.html">days02.ex01.html</a> <br />
+<a href="./../days01/ex01.html">days01.ex01.html</a> <br />
+<a href="../days01/ex01.html">days01.ex01.html</a> <br />
+
+
+<!-- A link if the href attribute is present,
+and the target for a link if the name attribute is present -->
+<!-- href는 필수로 넣어야한다 / href 값이 없으면 자기자신으로 걸려져 있다-->
+</body>
+</html>

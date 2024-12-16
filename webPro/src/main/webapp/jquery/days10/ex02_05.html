@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="shortcut icon" type="image/x-icon" href="http://localhost/webPro/images/SiSt.ico">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="http://localhost/webPro/resources/cdn-main/example.css">
+<script src="http://localhost/webPro/resources/cdn-main/example.js"></script>
+<style>
+ span.material-symbols-outlined{
+    vertical-align: text-bottom;
+ }  
+</style>
+</head>
+<body>
+<header>
+  <h1 class="main"><a href="#" style="position: absolute;top:30px;">kenik HOme</a></h1>
+  <ul>
+    <li><a href="#">로그인</a></li>
+    <li><a href="#">회원가입</a></li>
+  </ul>
+</header>
+<div>
+  <xmp class="code">
+     
+  </xmp>
+  <p>Lorem ipsum dolor sit amet.</p>
+  <p class="intro">Consequatur vitae quia exercitationem id.</p>
+  <p>Quisquam tempore deserunt possimus iusto.</p>
+  <p>Consequatur fugiat architecto quibusdam doloribus.</p>
+  <p>Excepturi nemo vel voluptate doloribus!</p>
+
+  <script>
+    // 1. p .intro  배경색 빨강
+    // $("p.intro").css("background-color", "red");
+
+    // 2. p 태그중에 intro 클래스를 가지고 있지 않은 p x태크 배경색 노랑으로
+    // $("p:not(.intro)").css("background-color", "yellow")
+    $("p").not(".intro").css("background-color", "blue")
+  </script>
+</div> 
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="shortcut icon" type="image/x-icon" href="http://localhost/webPro/images/SiSt.ico">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="http://localhost/webPro/resources/cdn-main/example.css">
+<script src="http://localhost/webPro/resources/cdn-main/example.js"></script>
+<style>
+ span.material-symbols-outlined{
+    vertical-align: text-bottom;
+ }  
+</style>
+<style>
+  #insert_box{
+    background-color: #FFFFFF;
+    border: 1px solid gray;
+    border-radius: 5px;
+    width: 50%;
+    height: 100px;
+    padding: 0.5rem 1rem;
+    margin: 0;
+    display: inline-block;
+
+  }
+</style>
+</head>
+<body>
+<header>
+  <h1 class="main"><a href="#" style="position: absolute;top:30px;">kenik HOme</a></h1>
+  <ul>
+    <li><a href="#">로그인</a></li>
+    <li><a href="#">회원가입</a></li>
+  </ul>
+</header>
+<div>
+  <xmp class="code">
+                         
+  </xmp>
+
+
+  <div id="insert">
+    이름 입력 : <input type="text" id="textinput" class="shot" name="name" placeholder="이름 입력" autofocus="autofocus">
+  </div>
+  
+  <div><button id="add">추가</button> </div>
+  <div id="insert_box">  </div>
+
+  <script>
+    const add = document.querySelector("#add");
+    add.onclick = function(){
+      const textinput = document.querySelector("#textinput").value;
+      const insertBox = document.querySelector("#insert_box");
+      insertBox.innerHTML = `<span style='color : red'>${textinput}</span><br>`;
+      document.querySelector("#textinput").select();
+    }
+    
+    
+
+  </script>
+  
+  
+</div> 
+</body>
+</html>

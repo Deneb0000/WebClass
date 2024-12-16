@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="shortcut icon" type="image/x-icon" href="http://localhost/webPro/images/SiSt.ico">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+    #panel,.flip{
+        background-color: #4acf50;
+        color: white;
+        text-align: center;
+
+        font-size:  16px;
+        padding: 10px;
+
+        border: 1px solid #a6d8a8;
+        margin: auto;
+    }
+
+    #panel{
+        display: none;
+    }
+
+    .flip:hover{
+        cursor: pointer;
+        color: red;
+        font: bold;        
+    }
+
+
+
+</style>
+</head>
+<body>
+
+    <p class="flip">Click to show panel</p>
+    <div id="panel">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum, minima! Qui, eligendi perferendis corrupti officiis quis sapiente nemo, fugiat similique atque et iste libero, consequuntur repellat repellendus laudantium accusamus. Beatae.</p>
+        <p>Rerum est modi assumenda dolor eaque deleniti quo veniam delectus ipsum aperiam exercitationem reiciendis, quisquam molestiae similique voluptatem totam? Tenetur laborum corrupti explicabo officia impedit eveniet, nulla deserunt culpa tempora?</p>
+        <p>Alias recusandae eum repudiandae quod, itaque aliquid voluptate saepe non cupiditate delectus, vero nostrum dignissimos facilis vel suscipit modi adipisci numquam voluptatem officia praesentium! Laboriosam fugit provident magnam repellendus quis?</p>
+    </div>
+    xxx
+
+    <script>
+        let sw = true;
+        $("p.flip").on("click",function(){
+            $("div#panel").toggle();
+            
+        });
+        // const flip = document.querySelector("p.flip");
+        // const panel = document.querySelector("div#panel");
+
+        // let sw = true;
+        // flip.addEventListener("click", function(){
+        //     if(sw){
+        //         panel.style.display = "block";
+        //     }else{
+        //         panel.style.display = "hide";
+        //     }
+        //     sw = !sw;            
+        // });
+    </script>
+
+</body>
+</html>

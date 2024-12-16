@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="shortcut icon" type="image/x-icon" href="http://localhost/webPro/images/SiSt.ico">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="http://localhost/webPro/resources/cdn-main/example.css">
+<script src="http://localhost/webPro/resources/cdn-main/example.js"></script>
+<style>
+ span.material-symbols-outlined{
+    vertical-align: text-bottom;
+ }  
+</style>
+</head>
+<body>
+<header>
+  <h1 class="main"><a href="#" style="position: absolute;top:30px;">kenik HOme</a></h1>
+  <ul>
+    <li><a href="#">로그인</a></li>
+    <li><a href="#">회원가입</a></li>
+  </ul>
+</header>
+<div>
+  <xmp class="code">
+     
+  </xmp>
+
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero, quos.</p>
+  <p>Ipsa incidunt cumque <span>consequuntur</span> modi. Labore ipsa iure aperiam asperiores!</p>
+  <p>Nisi libero, ad odio quas omnis voluptates unde alias et?</p>
+  <p>Illo laborum facilis culpa enim ipsum animi non sapiente maiores.</p>
+  <p>Incidunt animi quae, dolor ab explicabo cupiditate dolorum beatae vero?</p>
+
+  <script>
+    // $("p").css("color","red")
+    // $("p:has(span)").css("color","red")
+    $("p").has("span").css("color","red")
+
+    //[문제] p태그의 내용에 eius 문자를 가지고 있는 p태그 배경색 빨갛게
+    $("p").has(`{q}`).css("background-color", "red");
+
+    
+  </script>
+
+</div> 
+</body>
+</html>

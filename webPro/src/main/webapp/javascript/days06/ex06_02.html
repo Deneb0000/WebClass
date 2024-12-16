@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="shortcut icon" type="image/x-icon" href="http://localhost/webPro/images/SiSt.ico">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="http://localhost/webPro/resources/cdn-main/example.css">
+<script src="http://localhost/webPro/resources/cdn-main/example.js"></script>
+<style>
+ span.material-symbols-outlined{
+    vertical-align: text-bottom;
+ }  
+</style>
+</head>
+<body>
+<header>
+  <h1 class="main"><a href="#" style="position: absolute;top:30px;">kenik HOme</a></h1>
+  <ul>
+    <li><a href="#">로그인</a></li>
+    <li><a href="#">회원가입</a></li>
+  </ul>
+</header>
+<div>
+  <xmp class="code">
+     
+  </xmp>
+</div> 
+<script>
+  // [ 문제 ] 이번 달의 마지막 날짜?
+  /*
+  const d = new Date();
+  let year = d.getFullYear();
+  let month = d.getMonth()+1;
+  const d2 = new Date(year,month,0);
+  document.write(d2.getDate());
+  */
+
+  // [ 문제 ] const rrn = "870412-1700001";
+  // 생일이 지났는지 안지났는지? 생일인지?
+  const rrn = "870412-1700001";
+
+  const t = new Date(); //오늘날짜
+  let tYear = t.getFullYear();
+  t.setHours(0);      //0값으로 초기화
+  t.setMinutes(0);
+  t.setSeconds(0);
+  t.setMilliseconds(0);
+  
+  // js slice() / substring / substr()
+  let month = rrn.substr(2,2);    // 04월
+  let date = rrn.substr(4,2);     // 12일
+  const b = new Date(2024,month-1,date);    //  년도는 상관안하니깐 04월 / 12일 
+  // document.write(b.toLocaleString()+"<br>");
+  // document.write(t.toLocaleString()+"<br>");
+  document.write(b.getTime()+"<br>");
+  document.write(t.getTime()+"<br>");
+  document.write((t-b)+"<br>");     // == document.write(t.getTime()-b.getTime()+"<br>"); 같은 이야기
+  if((t-b)== 0){
+    document.write("생일");
+  }else if((t-b) > 0 ){
+    document.write("생일 지났음")
+  }else{
+    document.write("생일 안지남")
+  }
+  
+  /*
+  const rrn = "870412-1700001";
+  const rrnA = rrn.toString();
+  const birth = [rrnA[2]+rrnA[3]+rrnA[4]+rrnA[5]]
+  // alert(rrnAr)
+  const today = new Date();
+  */
+
+
+
+
+
+  // const d = new Date(2024,10+1,0);
+  // document.write(d.getMonth()+"<br>");
+  // document.write(d.getDate());
+
+</script>
+</body>
+</html>

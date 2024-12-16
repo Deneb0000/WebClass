@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="shortcut icon" type="image/x-icon" href="http://localhost/webPro/images/SiSt.ico">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="http://localhost/webPro/resources/cdn-main/example.css">
+<script src="http://localhost/webPro/resources/cdn-main/example.js"></script>
+<style>
+ span.material-symbols-outlined{
+    vertical-align: text-bottom;
+ }  
+</style>
+</head>
+<body>
+<header>
+  <h1 class="main"><a href="#" style="position: absolute;top:30px;">kenik HOme</a></h1>
+  <ul>
+    <li><a href="#">로그인</a></li>
+    <li><a href="#">회원가입</a></li>
+  </ul>
+</header>
+<div>
+  <xmp class="code">
+     
+  </xmp>
+  <div style="display: flex;justify-content: space-around;align-items: baseline;"></div>
+    <input type="text" id="first" autofocus="autofocus">
+    <select name="operator" id="operator">
+         <option value="">선택.</option>
+         <option value="+">+</option>
+         <option>-</option>
+         <option>*</option>
+         <option>/</option>
+         <option>%</option>
+         <option>**</option>
+   </select> 
+    <input type="text" id="sec">
+    =
+    <input type="text" disabled="disabled">
+  </div>
+</div>
+<script>
+  $(":text").first();
+  let txt2 = $(":text").eq(2);
+  let txt3 = $(":text").last();
+  //combobox  cmb
+  let opCmb = $("#operator")
+
+  let n1, n2;
+
+
+  $(":text").firs().on("keydown", function(){
+    if( ! (event.keyCode >=48 && event.keyCode <=57
+    || event.keyCode == 8
+            || event.w == 9
+            || event.keyCode == 13
+            || event.keyCode != 229 ) ){
+      alert("숫자만 입력");
+      event.returnValue=false;
+    }
+    if(event.key == "Enter"){
+      $(this).prev().focus();
+    }
+  })
+
+  txt2.onkeydown = function(){
+    if( ! (event.keyCode >=48 && event.keyCode <=57
+      || event.key == "Backspace" || event.key == "Delete" || keyCode == 229
+    ) ){
+      alert("숫자만 입력");
+      event.returnValue=false;
+    }
+    if(event.key == "Enter"){
+      /*
+      let result = parseInt(txt1.value) + Number(txt2.value);
+      txt3.value = result;
+
+      txt1.select();
+      */
+     this.previousSibling.focus();   //앞에있는 놈
+    }
+  }
+
+  opCmb.onchange = function(){
+    let op = $(this).val();    //  + - * 
+    let result = eval()
+
+   /*
+    let result;
+    switch(this.value){
+      case "+":
+        result = parseInt(txt1.value) + Number (txt2.value);
+        break;
+      case "-":
+      result = parseInt(txt1.value) - Number (txt2.value);
+        break;
+      case "*":
+      result = parseInt(txt1.value) * Number (txt2.value);
+        break;
+      case "/":
+      result = parseInt(txt1.value) / Number (txt2.value);
+        break;
+      case "%":
+      result = parseInt(txt1.value) % Number (txt2.value);
+        break;
+      case "**":
+      result = parseInt(txt1.value) ** Number (txt2.value);
+        break;
+    }
+        */
+    txt3.val(result);
+  }
+
+
+
+// document.getElementById("first").addEventListener('keydown', function(event){
+//   if(!/^\d$/.test(event.key)&& event.key !== "Backspace" && event.key !== "Delete" && event.key !== "Enter"){
+//     alert("숫자만 입력");
+//     event.preventDefault();
+//     this.value = this. value. replace(/^\d$/,'');
+//   }else if(event.key == "Enter"){
+
+//   }
+// })
+
+// document.getElementById("sec").focus();
+
+
+
+// document.getElementById("age").addEventListener('keydown', function(event){
+//   if(!/^\d$/.test(event.key)&& event.key !== "Backspace" && event.key !== "Delete" && event.key !== "Enter"){
+//     alert("숫자만 입력하세요");
+//     event.preventDefault();
+//     this.value = this.value.replace(/^\d$/,'');
+//    }
+//   })
+
+</script>
+</body>
+</html>

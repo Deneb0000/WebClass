@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="shortcut icon" type="image/x-icon" href="http://localhost/webPro/images/SiSt.ico">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body onload="window_init();">
+<!--
+[html 양식 (form)]
+ ㄴ 사용자가 입력한 정보를 수집하는데 사용하는 요소들
+ ㄴ 서버로 전송 ( 서브밋 submit )
+ 						form 내부에 action(보낼 서버의 자원) 값은 필수이다
+ 		fieldset 그룹화시켜준다
+-->
+<form action="ex05_ok.jsp" method="get">
+<fieldset>
+	<legend>로그인</legend>
+	<label for="id">아이디</label>
+	<input type="text" id="id" name="id" autofocus="autofocus" tabindex="1" placeholder="아이디 입력"> <!-- name 속성이 아니면 서버에 전달 할수가 없다  -->
+	<br>
+	<label for="passwd">비밀번호</label>
+	<input type="password" id="passwd" name="passwd"tabindex="2"placeholder="8~15대소튼숫 비밀번호 입력">
+	<br>
+	<input type="submit" tabindex="3" value="로그인">
+	<input type="reset" tabindex="4" onclick="funcReset();">
+
+	<button type="button">일반버튼</button>
+	<button type="submit">제출버튼</button>
+	<button type="reset">리셋버튼</button>
+
+	<br>	
+</fieldset>
+</form>
+<!-- form에 값을 설정하지 않으면 계속 서버에 갔다가 다시 자기 자신을 부른다 -->
+<form action="required">		<!-- 폼태그가 여러개 있어도 된다 / 바깥에 있는 파라미터는 가져가지 않는다-->
+<!-- 선택할 수 있는 옵션 목록 지정 -->
+<input list="browser">
+<datalist id="browser">
+	<option value="IE">
+	<option value="Chrome">
+	<option value="Firefox">
+	<option value="Opera">
+</datalist>
+Email : <input type="email" placeholder="sample@sist.co.kr" required="required">
+<br>
+<p>좋아하는 동물?</p>
+<input type="checkbox" name="animals" value="dog" id="dog"><label for="dog">강아지</label>
+<input type="checkbox" name="animals" value="cat"><label>고양이</label>
+<input type="checkbox" name="animals" value="pig"><label>돼지</label>
+<input type="checkbox" name="animals" value="lizard"><label>도마뱀</label>
+
+<p>가장 좋아하는 색깔?</p>
+<input type="radio" name="color" value="red" checked="checked"><label>빨강</label>
+<input type="radio" name="color" value="green" ><label>초록</label>
+<input type="radio" name="color" value="blue"><label>파랑</label>
+
+<p>부서를 선택?</p>
+<select onchange="" id="idptno" name="depno" size="4" multiple="multiple"> <!-- multiple 여러개선택 -->
+	<option value="10">ACCOUTING</option>
+	<option value="20">RESEARCH</option>
+	<option value="30">SALES</option>
+	<option value="40">ate</option>
+</select>
+<br>
+<p>하고 싶은 말</p>
+<textarea rows="10" cols="30"></textarea>
+ <!-- ㄴ 입력태그 -->
+
+<br>
+<input type="submit">
+
+</form>
+
+<script>
+	function funcReset(){
+		document.querySelector("#id").focus;
+	}
+
+	function window_init() {
+		//js method - focus()
+		//document.querySelector("#id").focus();
+	}
+</script>
+</body>
+</html>

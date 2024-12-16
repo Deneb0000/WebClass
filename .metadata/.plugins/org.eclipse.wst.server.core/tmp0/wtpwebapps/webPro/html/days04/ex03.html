@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="shortcut icon" type="image/x-icon" href="http://localhost/webPro/images/SiSt.ico">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<style>
+    html, body{
+        margin: 0;
+        padding: 0;
+    }
+    ul{
+    /*  border: solid 1px black; */
+    /* border-style: solid;
+    border-width: 1px;
+    border-color: blue; */
+
+ 
+    background-color: #000;
+
+    list-style-type: none;
+    margin:  0px;
+    padding: 0px;
+
+    overflow: hidden; 
+    /* 넘치는 부분을 숨긴다는 뜻이였는데 높이가 잡혀버림 */
+    }
+    ul#main li a{
+        color: #FFF;
+        text-decoration: none;
+        /* border: solid 1px red; */
+        padding: 16px;
+
+
+        /* inline 모드 -> block 모드 변경 */
+    display: block;
+    }
+
+    ul#main li{
+        /* 이미지 플로팅 (float) */
+        float:left;
+    }
+        /* 첫번째 li 태그만 해당된다는 뜻 */
+    ul#main li:nth-child(1){
+        background-color: #720000;
+    }
+
+    ul#main li:nth-last-child(1){
+        /* background-color: #000072; */
+        float: right;
+    }
+
+    /* 활성화된 메뉴 class = active  */
+    ul#main li a.active{
+        background-color: #04AA60;
+        color: #FFF;
+    }
+    
+    /* CSS 선택자 */
+    ul#main li a:hover:not(.active){
+        color: orange;
+        background-color: #111;
+    }
+
+</style>
+</head>
+<body>
+<!-- ul#main>li*4>a -->
+    <ul id="main">
+        <li><a href="#">Home</a></li>
+        <li><a href="#" class="active">News</a></li>
+        <li><a href="#">Contact</a></li>
+        <li><a href="#">About</a></li>
+    </ul>
+</body>
+</html>
+<!-- 상단메뉴 같다 -->

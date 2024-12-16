@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="shortcut icon" type="image/x-icon"
+	href="http://localhost/webPro/images/SiSt.ico">
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<style>
+div {
+	background-color: #ffff00;
+    width: 300px;
+}
+
+span {
+	border: solid 1px red;
+    display: block;
+}
+</style>
+</head>
+<body>
+ 	<!-- 숨기기+보이기 -->
+    <button id ="btnSH">숨기기</button>
+ 
+	<br>
+	<div id='demo'>
+        <span>이시훈</span><br>
+        <span>김준석</span><br>
+        <span>김재민</span><br>
+	</div>
+
+    <script>
+        // 제이쿼리로 바꾸기
+        //$("#아이디명")
+        //$("#클래스명")
+        //onclick() jquery method
+        /*$("#btnSH").click(function(){
+            console.log("click");
+        });*/
+        var sw = true;
+        $("#btnSH").on("click", function(){
+            alert($(this).text("텍스트출력"));
+            console.log("click...");
+            // $("#demo").show()/.hide()
+
+            // demo.style.visibility= sw?"visible":"hidden";
+            $("#demo").css("visibility",sw?"hidden":"visible");
+
+            // this.innerText = "보이기";           text()
+            // $(this).text("보이기");
+
+            $(this).text(sw?"숨기기":"보이기");
+            sw=!sw;
+        })
+    </script>
+</body>
+</html>

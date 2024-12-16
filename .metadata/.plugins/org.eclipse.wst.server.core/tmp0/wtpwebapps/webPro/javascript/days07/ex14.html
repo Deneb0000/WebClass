@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="shortcut icon" type="image/x-icon" href="http://localhost/webPro/images/SiSt.ico">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="http://localhost/webPro/resources/cdn-main/example.css">
+<script src="http://localhost/webPro/resources/cdn-main/example.js"></script>
+<style>
+ span.material-symbols-outlined{
+    vertical-align: text-bottom;
+ }  
+</style>
+</head>
+<body>
+<header>
+  <h1 class="main"><a href="#" style="position: absolute;top:30px;">kenik HOme</a></h1>
+  <ul>
+    <li><a href="#">로그인</a></li>
+    <li><a href="#">회원가입</a></li>
+  </ul>
+</header>
+<div>
+  <xmp class="code">
+     [ js 객체 ]
+     - js 겍체는 기본형을 제외한 모든 것이 js 객체이다.
+     - js 기본형 : Number, string, boolean, bigint, null, undefind, symbol
+     - js 객체   : function, array, object
+                  Math 표준 내장 객체
+                  new String()  선능상 문제로 권장x
+                  new Number()  선능상 문제로 권장x
+                  new Date()    선능상 문제로 권장x
+                  new Boolean() 선능상 문제로 권장x
+     - 객체 생성(정의) 방법
+      1) 객체 리터럴 사용
+      2) new  키워드 사용
+      3) 객체 생성자 함수 사용
+      등등..
+  </xmp>
+  <script>
+    // 1) 객체 리터럴 사용
+    // 속성, 메서드도 없는 빈 객체 생성
+    const person = {};
+    // const person = new Object(); 같지만 권장x
+
+    // 2) 빈 객체에 속성 추가
+    person.name = "홍길동";
+    person.age = 20;
+
+    // 3) 객체의 속성에 접근하는 방법
+    // 객체명. 속성명       person.name
+    // 객체명["속성명"]     person["age"]
+
+    // 3-2) for in 문   객체의 속성에 접근하는 방법
+    for (var  p in person ){
+      document.write(p + "/" + person[p] +"<br>");
+      // name/홍길동
+      // age/20
+    }
+
+  </script>
+</div> 
+</body>
+</html>

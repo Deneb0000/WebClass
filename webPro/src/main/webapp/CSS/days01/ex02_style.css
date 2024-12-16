@@ -1,0 +1,28 @@
+@charset "UTF-8";
+
+*{	/*범용 선택자 	0점*/
+
+}
+
+p#first{
+    color: orange;
+}
+#first{
+    color: aqua;
+}
+
+p.last{	/*1+10점*/
+background-color: green;
+}
+
+.last{
+    background-color: yellow;
+}
+p{
+    color: red;
+    text-align: center;
+}
+
+p{
+    color:  blue;
+}

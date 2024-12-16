@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="shortcut icon" type="image/x-icon" href="http://localhost/webPro/images/SiSt.ico">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>	/*위에서부터 적용되서 마지막줄꺼가 적용된다*/
+	/* css 적용하는 방법 첫 번째 = head 태그 않에 style 태그로 설정 */
+	/* 내부적 (internal) css 적용 방법 */
+	/*
+		[css select의 대상]
+		(1) 태그명
+		(2) #아이디명
+
+		[css 특이성]
+		- 동일한 요소를 가리키는 css 규칙이 두 개 이상 있는 경우,
+		 특이성 값이 가장 높은 선택자의 스타일이 적용된다
+		- 특이성 = 점수 = 순위
+			ㄴ 최종적으로 어떤 스타일이 적용될지를 결정하는 점수
+			ㄴ 특이성의 값을 계산하는 방법
+				1) 태그명이 선택자일때는	1점
+				2) #아이디명일 경우			100점
+				3) .클래스명일 경우 		10점
+				4) inline css 경우		  1000점
+				5) *{ 범용 선택자 }			0점
+
+	*/
+	#xx p#first.last{	/* 특이성 100점 + 1점 + 100점 + 10점 */
+
+	}
+
+	*{	/*범용 선택자 	0점*/
+
+	}
+
+	p#first{
+		color: orange;
+	}
+	#first{
+		color: aqua;
+	}
+
+p.last{	/*1+10점*/
+	background-color: green;
+}
+
+	.last{
+		background-color: yellow;
+	}
+	p{
+		color: red;
+		text-align: center;
+	}
+
+	p{
+		color:  blue;
+	}
+</style>
+</head>
+<body>
+<!-- 우분트 22.04LTS
+JDK 11
+Tomcat 9.x
+Oracle 11.g 
+
+
+	[css] 
+	- Cascading Style Sheets
+		계단식
+		떨어뜨리다
+		작은 폭포
+		단계적으로 행하다
+	- html <- html 화면 구성
+	- 문서 스타일 지정하는 언어
+	- html 요소가 화면, 종이, 기타 미디어 장치에는 어떻게 나올지 표시되는 방법을 지정
+	- 여러 웹 페이지의 레이어아웃 한 번에 제어 할 수 있다.
+	- css 구문
+		스타일을 적용할 대상 {	=선택자 =css select
+			속성명: 속성값:
+			속성명: 속성값:
+			속성명: 속성값:
+			속성명: 속성값:
+			속성명: 속성값:
+			속성명: 속성값:
+		}
+		html 단위를 생략 : px
+		css 단위 생략 할수 없다 	예외) 값이 0이면 생략 가능
+-->
+	<!-- p*2>lorem5^div*4>lorem4 -->
+	<p id="first">Lorem ipsum dolor sit amet.</p>
+	<p class="last">Blanditiis maiores magnam molestiae ab.</p>
+
+	<!-- css 적용 2번째 방법 : inliine css 적용방법 -->
+	<!-- 어떤 태그의 style 속성으로 스타일 지정 특이성 : 1000점 -->
+	<div style="color: navy;">Lorem ipsum dolor sit.</div>
+	<div>Natus fugiat minus voluptatibus!</div>
+	<div>Tempore in mollitia delectus?</div>
+	<div class="last">Illo doloribus eum tempora?</div>
+</body>
+</html>

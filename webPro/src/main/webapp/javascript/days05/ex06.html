@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="shortcut icon" type="image/x-icon" href="http://localhost/webPro/images/SiSt.ico">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="http://localhost/webPro/resources/cdn-main/example.css">
+<script src="http://localhost/webPro/resources/cdn-main/example.js"></script>
+<style>
+ span.material-symbols-outlined{
+    vertical-align: text-bottom;
+ }  
+</style>
+</head>
+<body>
+<header>
+  <h1 class="main"><a href="#" style="position: absolute;top:30px;">kenik HOme</a></h1>
+  <ul>
+    <li><a href="#">로그인</a></li>
+    <li><a href="#">회원가입</a></li>
+  </ul>
+</header>
+<div>
+  <xmp class="code">
+     
+  </xmp>
+</div> 
+<script>
+  //1. js 숫자 -> 문자열 변환
+  let a = 10;
+  //  ㄱ. "10"        a+""
+  //  ㄴ. a.toString()
+
+  let x = 9.656;
+  /*
+  document.write(x.toExponential(2));   //지수표기법을 사용하여 문자열을 반환하는 문자열 함수
+  document.write("<br>");
+  document.write(x.toExponential(4));   // 매개변수는 소수점 뒤의 문자수(소수자리)를 지정.
+  document.write("<br>");
+  document.write(x.toExponential(6)); 
+  document.write("<br>");
+  */
+
+  /*
+  document.write(x.toFixed(2));  //9.66 //지수표기법x 단지 소수점 이하의 자리수를 지정하는 함수 (문자열)
+  document.write("<br>");
+  document.write(x.toFixed(4)); //9.6560
+  document.write("<br>");
+  document.write(x.toFixed(6)); //9.656000
+  document.write("<br>");
+  */
+
+  document.write(x.toPrecision());  //9.656 //Precision 정밀도라는 뜻   // 소숫점 자리수x 소숫점을 포함한 전체자리
+  document.write("<br>");
+  document.write(x.toPrecision(2)); //9.7
+  document.write("<br>");
+  document.write(x.toPrecision(4)); //9.656
+  document.write("<br>");
+  document.write(x.toPrecision(6)); //9.65600
+  document.write("<br>");
+  
+
+
+</script>
+</body>
+</html>
